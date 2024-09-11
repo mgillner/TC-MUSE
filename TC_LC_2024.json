@@ -31,11 +31,111 @@
         "name": "LC Varia SL-80",
         "mojo": {
             "device": "AMX-10001",
-            "md5": "62230f79d2e2cb1225963b2775258da0",
+            "md5": "3b91205f9afe63cfdedd874c25675c8a",
             "tp5": "TC Lets Connect 2024.TP5"
         },
         "x": 380,
         "y": 60,
+        "wires": []
+    },
+    {
+        "id": "781f8febf467d69f",
+        "type": "Event",
+        "z": "a3a5297f6c4eb17b",
+        "name": "button 1",
+        "mojo": {
+            "device": "AMX-10001",
+            "event": "//port/2/button/1",
+            "eventKind": "Parameter",
+            "paramType": "Boolean",
+            "boolParamFilter": "Any",
+            "onebased": true
+        },
+        "x": 240,
+        "y": 220,
+        "wires": [
+            [
+                "a22292eb4c2a5796"
+            ]
+        ]
+    },
+    {
+        "id": "9bb3b9c71938c6c8",
+        "type": "Event",
+        "z": "a3a5297f6c4eb17b",
+        "name": "button 2",
+        "mojo": {
+            "device": "AMX-10001",
+            "event": "//port/2/button/2",
+            "eventKind": "Parameter",
+            "paramType": "Boolean",
+            "boolParamFilter": "Any",
+            "onebased": true
+        },
+        "x": 240,
+        "y": 280,
+        "wires": [
+            [
+                "a22292eb4c2a5796"
+            ]
+        ]
+    },
+    {
+        "id": "64897b4d16502349",
+        "type": "Event",
+        "z": "a3a5297f6c4eb17b",
+        "name": "button 3",
+        "mojo": {
+            "device": "AMX-10001",
+            "event": "//port/2/button/3",
+            "eventKind": "Parameter",
+            "paramType": "Boolean",
+            "boolParamFilter": "Any",
+            "onebased": true
+        },
+        "x": 240,
+        "y": 340,
+        "wires": [
+            [
+                "a22292eb4c2a5796"
+            ]
+        ]
+    },
+    {
+        "id": "a23762353245dc01",
+        "type": "Event",
+        "z": "a3a5297f6c4eb17b",
+        "name": "button 4",
+        "mojo": {
+            "device": "AMX-10001",
+            "event": "//port/2/button/4",
+            "eventKind": "Parameter",
+            "paramType": "Boolean",
+            "boolParamFilter": "Any",
+            "onebased": true
+        },
+        "x": 240,
+        "y": 400,
+        "wires": [
+            [
+                "a22292eb4c2a5796"
+            ]
+        ]
+    },
+    {
+        "id": "a22292eb4c2a5796",
+        "type": "debug",
+        "z": "a3a5297f6c4eb17b",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 300,
         "wires": []
     }
 ]
