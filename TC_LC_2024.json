@@ -300,22 +300,6 @@
         "wires": []
     },
     {
-        "id": "ccf4d23ad84590e0",
-        "type": "Status",
-        "z": "99303979d26972e1",
-        "name": "Source Feedback",
-        "mojo": {
-            "device": "AMX-10001",
-            "parameter": "//port/3/button/1",
-            "onebased": true
-        },
-        "x": 770,
-        "y": 580,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "3da4881f8462462b",
         "type": "inject",
         "z": "99303979d26972e1",
@@ -336,8 +320,27 @@
         "y": 580,
         "wires": [
             [
-                "ccf4d23ad84590e0"
+                "d48e0b95f59acf5e"
             ]
+        ]
+    },
+    {
+        "id": "d48e0b95f59acf5e",
+        "type": "Command",
+        "z": "99303979d26972e1",
+        "name": "Command",
+        "mojo": {
+            "device": "AMX-10001",
+            "command": "//port/3/channel/1",
+            "normalized": false,
+            "cmdvalue": "Message payload",
+            "args": "",
+            "onebased": true
+        },
+        "x": 770,
+        "y": 580,
+        "wires": [
+            []
         ]
     }
 ]
