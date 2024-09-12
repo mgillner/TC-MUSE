@@ -320,10 +320,7 @@
         "x": 330,
         "y": 140,
         "wires": [
-            [
-                "456a57b7374bded0",
-                "ed28f22d1252029a"
-            ]
+            []
         ]
     },
     {
@@ -348,10 +345,7 @@
         "x": 330,
         "y": 80,
         "wires": [
-            [
-                "456a57b7374bded0",
-                "ed28f22d1252029a"
-            ]
+            []
         ]
     },
     {
@@ -373,10 +367,27 @@
         ]
     },
     {
-        "id": "456a57b7374bded0",
+        "id": "594f206062dcdedb",
+        "type": "complete",
+        "z": "99303979d26972e1",
+        "name": "",
+        "scope": [
+            "10f02cef85fb5ff9"
+        ],
+        "uncaught": false,
+        "x": 610,
+        "y": 80,
+        "wires": [
+            [
+                "531bf7640598891a"
+            ]
+        ]
+    },
+    {
+        "id": "531bf7640598891a",
         "type": "switch",
         "z": "99303979d26972e1",
-        "name": "Feedback Logic",
+        "name": "",
         "property": "svsi.src",
         "propertyType": "flow",
         "rules": [
@@ -394,18 +405,17 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 560,
-        "y": 100,
+        "x": 770,
+        "y": 80,
         "wires": [
             [
-                "c7445e463509bed3",
-                "26de1f84d68e3f5b"
+                "7315cd30a54e7361"
             ],
             []
         ]
     },
     {
-        "id": "c7445e463509bed3",
+        "id": "7315cd30a54e7361",
         "type": "change",
         "z": "99303979d26972e1",
         "name": "",
@@ -416,13 +426,6 @@
                 "pt": "msg",
                 "to": "true",
                 "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "false",
-                "tot": "bool"
             }
         ],
         "action": "",
@@ -430,46 +433,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 840,
-        "y": 60,
+        "x": 1000,
+        "y": 80,
         "wires": [
             [
-                "d48e0b95f59acf5e",
-                "2dfb121870ec1887"
+                "d48e0b95f59acf5e"
             ]
         ]
-    },
-    {
-        "id": "ed28f22d1252029a",
-        "type": "debug",
-        "z": "99303979d26972e1",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 820,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "26de1f84d68e3f5b",
-        "type": "debug",
-        "z": "99303979d26972e1",
-        "name": "debug 4",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1220,
-        "y": 220,
-        "wires": []
     }
 ]
