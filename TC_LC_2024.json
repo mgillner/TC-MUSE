@@ -574,7 +574,7 @@
         "name": "Dst 2 Btn Feedback",
         "mojo": {
             "device": "AMX-10001",
-            "command": "//port/3/channel/4",
+            "command": "//port/3/send_command",
             "normalized": false,
             "cmdvalue": "Message payload",
             "onebased": true
