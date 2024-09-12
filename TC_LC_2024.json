@@ -65,7 +65,9 @@
         "x": 140,
         "y": 80,
         "wires": [
-            []
+            [
+                "c3ed392d15575483"
+            ]
         ]
     },
     {
@@ -87,7 +89,9 @@
         "x": 140,
         "y": 140,
         "wires": [
-            []
+            [
+                "1f78179f6f9e88b5"
+            ]
         ]
     },
     {
@@ -130,6 +134,56 @@
         },
         "x": 130,
         "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c3ed392d15575483",
+        "type": "change",
+        "z": "99303979d26972e1",
+        "name": "Set SRC 1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "svsi.src",
+                "pt": "flow",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1f78179f6f9e88b5",
+        "type": "change",
+        "z": "99303979d26972e1",
+        "name": "Set SRC 2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "svsi.src",
+                "pt": "flow",
+                "to": "2",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 140,
         "wires": [
             []
         ]
