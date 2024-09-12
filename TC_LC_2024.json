@@ -29,14 +29,59 @@
             "8fee283e58160b11",
             "a713c4846194b7e3",
             "3e102018d4210968",
-            "46cb9df474230d4c",
             "832834d6272d5a74",
-            "6b8a96acc119638d"
+            "6b8a96acc119638d",
+            "bc99e91caea7b6b1",
+            "ad7571ef97919fa7"
         ],
         "x": 54,
-        "y": 519,
+        "y": 879,
         "w": 1172,
-        "h": 182
+        "h": 142
+    },
+    {
+        "id": "cce4d4a2f7d1010e",
+        "type": "group",
+        "z": "99303979d26972e1",
+        "name": "Source Button Feeback",
+        "style": {
+            "stroke": "#92d04f",
+            "label": true
+        },
+        "nodes": [
+            "d48e0b95f59acf5e",
+            "2dfb121870ec1887",
+            "594f206062dcdedb",
+            "531bf7640598891a",
+            "7315cd30a54e7361",
+            "13365e1d0b39f4dc",
+            "35fab4221b5a6bdd",
+            "3368acfda836ffe5"
+        ],
+        "x": 54,
+        "y": 579,
+        "w": 1212,
+        "h": 242
+    },
+    {
+        "id": "a7e847e14b808079",
+        "type": "group",
+        "z": "99303979d26972e1",
+        "name": "Source Selection",
+        "style": {
+            "stroke": "#ffff00",
+            "label": true
+        },
+        "nodes": [
+            "10f02cef85fb5ff9",
+            "c2e5286164e30546",
+            "1f78179f6f9e88b5",
+            "c3ed392d15575483"
+        ],
+        "x": 54,
+        "y": 39,
+        "w": 372,
+        "h": 142
     },
     {
         "id": "b69aeef737b799da",
@@ -73,6 +118,7 @@
         "id": "10f02cef85fb5ff9",
         "type": "UI Control",
         "z": "99303979d26972e1",
+        "g": "a7e847e14b808079",
         "name": "Source 1",
         "mojo": {
             "cp": "e92c9383ec1b9fbf",
@@ -97,6 +143,7 @@
         "id": "c2e5286164e30546",
         "type": "UI Control",
         "z": "99303979d26972e1",
+        "g": "a7e847e14b808079",
         "name": "Source 2",
         "mojo": {
             "cp": "e92c9383ec1b9fbf",
@@ -135,7 +182,7 @@
             "state": "NONE"
         },
         "x": 130,
-        "y": 600,
+        "y": 920,
         "wires": [
             [
                 "3e102018d4210968"
@@ -160,7 +207,7 @@
             "state": "NONE"
         },
         "x": 130,
-        "y": 660,
+        "y": 980,
         "wires": [
             [
                 "832834d6272d5a74"
@@ -182,7 +229,7 @@
         "trim": false,
         "tls": "",
         "x": 830,
-        "y": 600,
+        "y": 920,
         "wires": [
             [
                 "6b8a96acc119638d"
@@ -210,31 +257,12 @@
         "to": "",
         "reg": false,
         "x": 310,
-        "y": 600,
+        "y": 920,
         "wires": [
             [
-                "46cb9df474230d4c",
                 "a713c4846194b7e3"
             ]
         ]
-    },
-    {
-        "id": "46cb9df474230d4c",
-        "type": "debug",
-        "z": "99303979d26972e1",
-        "g": "a8bcc57f5ed46174",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 820,
-        "y": 560,
-        "wires": []
     },
     {
         "id": "832834d6272d5a74",
@@ -257,9 +285,11 @@
         "to": "",
         "reg": false,
         "x": 310,
-        "y": 660,
+        "y": 980,
         "wires": [
-            []
+            [
+                "bc99e91caea7b6b1"
+            ]
         ]
     },
     {
@@ -276,14 +306,15 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1120,
-        "y": 600,
+        "y": 920,
         "wires": []
     },
     {
         "id": "d48e0b95f59acf5e",
         "type": "Command",
         "z": "99303979d26972e1",
-        "name": "Src 1 Feedback",
+        "g": "cce4d4a2f7d1010e",
+        "name": "Src 1 Btn Feedback",
         "mojo": {
             "device": "AMX-10001",
             "command": "//port/3/channel/1",
@@ -292,8 +323,8 @@
             "args": "",
             "onebased": true
         },
-        "x": 1620,
-        "y": 60,
+        "x": 1150,
+        "y": 620,
         "wires": [
             []
         ]
@@ -302,6 +333,7 @@
         "id": "1f78179f6f9e88b5",
         "type": "change",
         "z": "99303979d26972e1",
+        "g": "a7e847e14b808079",
         "name": "Set SRC 2",
         "rules": [
             {
@@ -327,6 +359,7 @@
         "id": "c3ed392d15575483",
         "type": "change",
         "z": "99303979d26972e1",
+        "g": "a7e847e14b808079",
         "name": "Set SRC 1",
         "rules": [
             {
@@ -352,7 +385,8 @@
         "id": "2dfb121870ec1887",
         "type": "Command",
         "z": "99303979d26972e1",
-        "name": "Src 2 Feedback",
+        "g": "cce4d4a2f7d1010e",
+        "name": "Src 2 Btn Feedback",
         "mojo": {
             "device": "AMX-10001",
             "command": "//port/3/channel/2",
@@ -360,8 +394,8 @@
             "cmdvalue": "Message payload",
             "onebased": true
         },
-        "x": 1660,
-        "y": 160,
+        "x": 1150,
+        "y": 780,
         "wires": [
             []
         ]
@@ -370,18 +404,18 @@
         "id": "594f206062dcdedb",
         "type": "complete",
         "z": "99303979d26972e1",
+        "g": "cce4d4a2f7d1010e",
         "name": "",
         "scope": [
             "c3ed392d15575483",
             "1f78179f6f9e88b5"
         ],
         "uncaught": false,
-        "x": 650,
-        "y": 80,
+        "x": 150,
+        "y": 660,
         "wires": [
             [
-                "531bf7640598891a",
-                "7987b7757f9efea6"
+                "531bf7640598891a"
             ]
         ]
     },
@@ -389,6 +423,7 @@
         "id": "531bf7640598891a",
         "type": "switch",
         "z": "99303979d26972e1",
+        "g": "cce4d4a2f7d1010e",
         "name": "",
         "property": "svsi.src",
         "propertyType": "flow",
@@ -407,8 +442,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 810,
-        "y": 80,
+        "x": 310,
+        "y": 660,
         "wires": [
             [
                 "7315cd30a54e7361"
@@ -422,7 +457,8 @@
         "id": "7315cd30a54e7361",
         "type": "change",
         "z": "99303979d26972e1",
-        "name": "",
+        "g": "cce4d4a2f7d1010e",
+        "name": "Context to Boolean",
         "rules": [
             {
                 "t": "set",
@@ -437,8 +473,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1040,
-        "y": 80,
+        "x": 550,
+        "y": 640,
         "wires": [
             [
                 "d48e0b95f59acf5e",
@@ -447,26 +483,11 @@
         ]
     },
     {
-        "id": "7987b7757f9efea6",
-        "type": "debug",
-        "z": "99303979d26972e1",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 860,
-        "y": 300,
-        "wires": []
-    },
-    {
         "id": "13365e1d0b39f4dc",
         "type": "change",
         "z": "99303979d26972e1",
-        "name": "",
+        "g": "cce4d4a2f7d1010e",
+        "name": "Context To Boolean",
         "rules": [
             {
                 "t": "set",
@@ -481,8 +502,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1040,
-        "y": 140,
+        "x": 550,
+        "y": 700,
         "wires": [
             [
                 "2dfb121870ec1887",
@@ -494,9 +515,10 @@
         "id": "35fab4221b5a6bdd",
         "type": "Invert",
         "z": "99303979d26972e1",
+        "g": "cce4d4a2f7d1010e",
         "name": "Invert",
-        "x": 1490,
-        "y": 160,
+        "x": 950,
+        "y": 720,
         "wires": [
             [
                 "2dfb121870ec1887"
@@ -507,12 +529,52 @@
         "id": "3368acfda836ffe5",
         "type": "Invert",
         "z": "99303979d26972e1",
+        "g": "cce4d4a2f7d1010e",
         "name": "Invert",
-        "x": 1450,
-        "y": 100,
+        "x": 950,
+        "y": 660,
         "wires": [
             [
                 "d48e0b95f59acf5e"
+            ]
+        ]
+    },
+    {
+        "id": "ad7571ef97919fa7",
+        "type": "debug",
+        "z": "99303979d26972e1",
+        "g": "a8bcc57f5ed46174",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "bc99e91caea7b6b1",
+        "type": "tcp request",
+        "z": "99303979d26972e1",
+        "g": "a8bcc57f5ed46174",
+        "name": "Decoder 2",
+        "server": "192.168.155.103",
+        "port": "50002",
+        "out": "time",
+        "ret": "string",
+        "splitc": "1000",
+        "newline": "",
+        "trim": false,
+        "tls": "",
+        "x": 830,
+        "y": 980,
+        "wires": [
+            [
+                "ad7571ef97919fa7"
             ]
         ]
     }
