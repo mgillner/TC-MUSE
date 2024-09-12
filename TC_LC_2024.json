@@ -589,7 +589,7 @@
         "id": "ee9c36ba5c57ef4c",
         "type": "switch",
         "z": "99303979d26972e1",
-        "name": "Stream 2 Feedback",
+        "name": "Dec 1 Stream Feedback",
         "property": "payload",
         "propertyType": "msg",
         "rules": [
@@ -607,7 +607,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1150,
+        "x": 1170,
         "y": 640,
         "wires": [
             [
@@ -676,7 +676,7 @@
         "id": "a3e1918c47410896",
         "type": "switch",
         "z": "99303979d26972e1",
-        "name": "Stream 2 Feedback",
+        "name": "Dec 2 Stream Feedback",
         "property": "payload",
         "propertyType": "msg",
         "rules": [
@@ -694,7 +694,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1150,
+        "x": 1170,
         "y": 840,
         "wires": [
             [
@@ -715,7 +715,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "^TXT-3,0,1",
+                "to": "^TXT-4,0,1",
                 "tot": "str"
             }
         ],
@@ -742,7 +742,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "^TXT-3,0,2",
+                "to": "^TXT-4,0,2",
                 "tot": "str"
             }
         ],
