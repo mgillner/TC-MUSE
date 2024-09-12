@@ -16,6 +16,29 @@
         "env": []
     },
     {
+        "id": "a8bcc57f5ed46174",
+        "type": "group",
+        "z": "99303979d26972e1",
+        "name": "Destination Switching",
+        "style": {
+            "stroke": "#ff0000",
+            "label": true
+        },
+        "nodes": [
+            "f66b7135afd82214",
+            "8fee283e58160b11",
+            "a713c4846194b7e3",
+            "3e102018d4210968",
+            "46cb9df474230d4c",
+            "832834d6272d5a74",
+            "6b8a96acc119638d"
+        ],
+        "x": 54,
+        "y": 519,
+        "w": 1172,
+        "h": 182
+    },
+    {
         "id": "b69aeef737b799da",
         "type": "Controller",
         "z": "a3a5297f6c4eb17b",
@@ -98,6 +121,7 @@
         "id": "f66b7135afd82214",
         "type": "UI Control",
         "z": "99303979d26972e1",
+        "g": "a8bcc57f5ed46174",
         "name": "Dec 1",
         "mojo": {
             "cp": "e92c9383ec1b9fbf",
@@ -111,7 +135,7 @@
             "state": "NONE"
         },
         "x": 130,
-        "y": 220,
+        "y": 600,
         "wires": [
             [
                 "3e102018d4210968"
@@ -122,6 +146,7 @@
         "id": "8fee283e58160b11",
         "type": "UI Control",
         "z": "99303979d26972e1",
+        "g": "a8bcc57f5ed46174",
         "name": "Dec 2",
         "mojo": {
             "cp": "e92c9383ec1b9fbf",
@@ -135,7 +160,7 @@
             "state": "NONE"
         },
         "x": 130,
-        "y": 280,
+        "y": 660,
         "wires": [
             [
                 "832834d6272d5a74"
@@ -143,17 +168,40 @@
         ]
     },
     {
-        "id": "c3ed392d15575483",
+        "id": "a713c4846194b7e3",
+        "type": "tcp request",
+        "z": "99303979d26972e1",
+        "g": "a8bcc57f5ed46174",
+        "name": "Decoder 1",
+        "server": "192.168.155.102",
+        "port": "50002",
+        "out": "time",
+        "ret": "string",
+        "splitc": "1000",
+        "newline": "",
+        "trim": false,
+        "tls": "",
+        "x": 830,
+        "y": 600,
+        "wires": [
+            [
+                "6b8a96acc119638d"
+            ]
+        ]
+    },
+    {
+        "id": "3e102018d4210968",
         "type": "change",
         "z": "99303979d26972e1",
-        "name": "Set SRC 1",
+        "g": "a8bcc57f5ed46174",
+        "name": "Decoder 1",
         "rules": [
             {
                 "t": "set",
-                "p": "svsi.src",
-                "pt": "flow",
-                "to": "set: 1",
-                "tot": "str"
+                "p": "payload",
+                "pt": "msg",
+                "to": "svsi.src",
+                "tot": "flow"
             }
         ],
         "action": "",
@@ -161,7 +209,90 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 430,
+        "x": 310,
+        "y": 600,
+        "wires": [
+            [
+                "46cb9df474230d4c",
+                "a713c4846194b7e3"
+            ]
+        ]
+    },
+    {
+        "id": "46cb9df474230d4c",
+        "type": "debug",
+        "z": "99303979d26972e1",
+        "g": "a8bcc57f5ed46174",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "832834d6272d5a74",
+        "type": "change",
+        "z": "99303979d26972e1",
+        "g": "a8bcc57f5ed46174",
+        "name": "Decoder 2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "svsi.src",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 310,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6b8a96acc119638d",
+        "type": "debug",
+        "z": "99303979d26972e1",
+        "g": "a8bcc57f5ed46174",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "d48e0b95f59acf5e",
+        "type": "Command",
+        "z": "99303979d26972e1",
+        "name": "Src 1 Feedback",
+        "mojo": {
+            "device": "AMX-10001",
+            "command": "//port/3/channel/1",
+            "normalized": false,
+            "cmdvalue": "Message payload",
+            "args": "",
+            "onebased": true
+        },
+        "x": 1320,
         "y": 80,
         "wires": [
             []
@@ -186,45 +317,33 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 430,
+        "x": 330,
         "y": 140,
         "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a713c4846194b7e3",
-        "type": "tcp request",
-        "z": "99303979d26972e1",
-        "name": "Decoder 1",
-        "server": "192.168.155.102",
-        "port": "50002",
-        "out": "time",
-        "ret": "string",
-        "splitc": "1000",
-        "newline": "",
-        "trim": false,
-        "tls": "",
-        "x": 830,
-        "y": 220,
-        "wires": [
             [
-                "6b8a96acc119638d"
+                "456a57b7374bded0"
             ]
         ]
     },
     {
-        "id": "3e102018d4210968",
+        "id": "c3ed392d15575483",
         "type": "change",
         "z": "99303979d26972e1",
-        "name": "Decoder 1",
+        "name": "Set SRC 1",
         "rules": [
+            {
+                "t": "set",
+                "p": "svsi.src",
+                "pt": "flow",
+                "to": "set: 1",
+                "tot": "str"
+            },
             {
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "svsi.src",
-                "tot": "flow"
+                "to": "",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -232,115 +351,96 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 310,
-        "y": 220,
+        "x": 330,
+        "y": 80,
         "wires": [
             [
-                "46cb9df474230d4c",
-                "a713c4846194b7e3"
+                "456a57b7374bded0"
             ]
         ]
     },
     {
-        "id": "46cb9df474230d4c",
-        "type": "debug",
-        "z": "99303979d26972e1",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 820,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "832834d6272d5a74",
-        "type": "change",
-        "z": "99303979d26972e1",
-        "name": "Decoder 2",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "svsi.src",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 310,
-        "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6b8a96acc119638d",
-        "type": "debug",
-        "z": "99303979d26972e1",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1120,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "3da4881f8462462b",
-        "type": "inject",
-        "z": "99303979d26972e1",
-        "name": "True Feeback",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 490,
-        "y": 580,
-        "wires": [
-            [
-                "d48e0b95f59acf5e"
-            ]
-        ]
-    },
-    {
-        "id": "d48e0b95f59acf5e",
+        "id": "2dfb121870ec1887",
         "type": "Command",
         "z": "99303979d26972e1",
-        "name": "Command",
+        "name": "Src 2 Feedback",
         "mojo": {
             "device": "AMX-10001",
-            "command": "//port/3/channel/1",
+            "command": "//port/3/channel/2",
             "normalized": false,
             "cmdvalue": "Message payload",
-            "args": "",
             "onebased": true
         },
-        "x": 770,
-        "y": 580,
+        "x": 1320,
+        "y": 120,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "456a57b7374bded0",
+        "type": "switch",
+        "z": "99303979d26972e1",
+        "name": "Feedback Logic",
+        "property": "svsi.src",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "set: 1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "set: 2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 560,
+        "y": 100,
+        "wires": [
+            [
+                "c7445e463509bed3"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c7445e463509bed3",
+        "type": "change",
+        "z": "99303979d26972e1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 60,
+        "wires": [
+            [
+                "d48e0b95f59acf5e",
+                "2dfb121870ec1887"
+            ]
         ]
     }
 ]
