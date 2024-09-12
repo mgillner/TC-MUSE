@@ -50,10 +50,86 @@
         "id": "10f02cef85fb5ff9",
         "type": "UI Control",
         "z": "99303979d26972e1",
-        "name": "UI Control",
-        "mojo": {},
+        "name": "Source 1",
+        "mojo": {
+            "cp": "e92c9383ec1b9fbf",
+            "type": "BUTTON",
+            "path": "//505/3",
+            "locator": {
+                "ccode": 1,
+                "cport": 3
+            },
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
         "x": 140,
         "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c2e5286164e30546",
+        "type": "UI Control",
+        "z": "99303979d26972e1",
+        "name": "Source 2",
+        "mojo": {
+            "cp": "e92c9383ec1b9fbf",
+            "type": "BUTTON",
+            "path": "//505/2",
+            "locator": {
+                "ccode": 2,
+                "cport": 3
+            },
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 140,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f66b7135afd82214",
+        "type": "UI Control",
+        "z": "99303979d26972e1",
+        "name": "Dec 1",
+        "mojo": {
+            "cp": "e92c9383ec1b9fbf",
+            "type": "BUTTON",
+            "path": "//505/4",
+            "locator": {
+                "ccode": 3,
+                "cport": 3
+            },
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 130,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8fee283e58160b11",
+        "type": "UI Control",
+        "z": "99303979d26972e1",
+        "name": "Dec 2",
+        "mojo": {
+            "cp": "e92c9383ec1b9fbf",
+            "type": "BUTTON",
+            "path": "//505/9",
+            "locator": {
+                "ccode": 4,
+                "cport": 3
+            },
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 130,
+        "y": 260,
         "wires": [
             []
         ]
