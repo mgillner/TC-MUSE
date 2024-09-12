@@ -208,7 +208,9 @@
         "x": 830,
         "y": 220,
         "wires": [
-            []
+            [
+                "6b8a96acc119638d"
+            ]
         ]
     },
     {
@@ -280,5 +282,21 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "6b8a96acc119638d",
+        "type": "debug",
+        "z": "99303979d26972e1",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 220,
+        "wires": []
     }
 ]
