@@ -330,8 +330,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
+        "payload": "1",
+        "payloadType": "num",
         "x": 490,
         "y": 580,
         "wires": [
