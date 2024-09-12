@@ -292,8 +292,8 @@
             "args": "",
             "onebased": true
         },
-        "x": 1320,
-        "y": 80,
+        "x": 1620,
+        "y": 60,
         "wires": [
             []
         ]
@@ -360,8 +360,8 @@
             "cmdvalue": "Message payload",
             "onebased": true
         },
-        "x": 1320,
-        "y": 120,
+        "x": 1660,
+        "y": 160,
         "wires": [
             []
         ]
@@ -376,7 +376,7 @@
             "1f78179f6f9e88b5"
         ],
         "uncaught": false,
-        "x": 610,
+        "x": 650,
         "y": 80,
         "wires": [
             [
@@ -407,7 +407,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 770,
+        "x": 810,
         "y": 80,
         "wires": [
             [
@@ -430,13 +430,6 @@
                 "pt": "msg",
                 "to": "true",
                 "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "false",
-                "tot": "bool"
             }
         ],
         "action": "",
@@ -444,14 +437,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1000,
+        "x": 1040,
         "y": 80,
         "wires": [
             [
                 "d48e0b95f59acf5e",
-                "30aaca7802ca8e21",
-                "2dfb121870ec1887",
-                "36549690fe26658f"
+                "35fab4221b5a6bdd"
             ]
         ]
     },
@@ -467,24 +458,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
+        "x": 860,
         "y": 300,
-        "wires": []
-    },
-    {
-        "id": "30aaca7802ca8e21",
-        "type": "debug",
-        "z": "99303979d26972e1",
-        "name": "debug 5",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1440,
-        "y": 240,
         "wires": []
     },
     {
@@ -493,13 +468,6 @@
         "z": "99303979d26972e1",
         "name": "",
         "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "false",
-                "tot": "bool"
-            },
             {
                 "t": "set",
                 "p": "payload",
@@ -513,46 +481,39 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1000,
+        "x": 1040,
         "y": 140,
         "wires": [
             [
-                "d48e0b95f59acf5e",
                 "2dfb121870ec1887",
-                "6000e1919ed61e3e"
+                "3368acfda836ffe5"
             ]
         ]
     },
     {
-        "id": "36549690fe26658f",
-        "type": "debug",
+        "id": "35fab4221b5a6bdd",
+        "type": "Invert",
         "z": "99303979d26972e1",
-        "name": "debug 6",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1420,
-        "y": 320,
-        "wires": []
+        "name": "Invert",
+        "x": 1490,
+        "y": 160,
+        "wires": [
+            [
+                "2dfb121870ec1887"
+            ]
+        ]
     },
     {
-        "id": "6000e1919ed61e3e",
-        "type": "debug",
+        "id": "3368acfda836ffe5",
+        "type": "Invert",
         "z": "99303979d26972e1",
-        "name": "debug 7",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1440,
-        "y": 400,
-        "wires": []
+        "name": "Invert",
+        "x": 1450,
+        "y": 100,
+        "wires": [
+            [
+                "d48e0b95f59acf5e"
+            ]
+        ]
     }
 ]
