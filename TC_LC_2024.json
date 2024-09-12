@@ -35,7 +35,7 @@
             "ad7571ef97919fa7"
         ],
         "x": 54,
-        "y": 879,
+        "y": 479,
         "w": 1172,
         "h": 142
     },
@@ -59,7 +59,7 @@
             "3368acfda836ffe5"
         ],
         "x": 54,
-        "y": 579,
+        "y": 219,
         "w": 1212,
         "h": 242
     },
@@ -79,7 +79,7 @@
             "c3ed392d15575483"
         ],
         "x": 54,
-        "y": 39,
+        "y": 59,
         "w": 372,
         "h": 142
     },
@@ -132,7 +132,7 @@
             "state": "NONE"
         },
         "x": 140,
-        "y": 80,
+        "y": 100,
         "wires": [
             [
                 "c3ed392d15575483"
@@ -157,7 +157,7 @@
             "state": "NONE"
         },
         "x": 140,
-        "y": 140,
+        "y": 160,
         "wires": [
             [
                 "1f78179f6f9e88b5"
@@ -182,7 +182,7 @@
             "state": "NONE"
         },
         "x": 130,
-        "y": 920,
+        "y": 520,
         "wires": [
             [
                 "3e102018d4210968"
@@ -207,7 +207,7 @@
             "state": "NONE"
         },
         "x": 130,
-        "y": 980,
+        "y": 580,
         "wires": [
             [
                 "832834d6272d5a74"
@@ -229,7 +229,7 @@
         "trim": false,
         "tls": "",
         "x": 830,
-        "y": 920,
+        "y": 520,
         "wires": [
             [
                 "6b8a96acc119638d"
@@ -257,7 +257,7 @@
         "to": "",
         "reg": false,
         "x": 310,
-        "y": 920,
+        "y": 520,
         "wires": [
             [
                 "a713c4846194b7e3"
@@ -285,7 +285,7 @@
         "to": "",
         "reg": false,
         "x": 310,
-        "y": 980,
+        "y": 580,
         "wires": [
             [
                 "bc99e91caea7b6b1"
@@ -306,7 +306,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1120,
-        "y": 920,
+        "y": 520,
         "wires": []
     },
     {
@@ -324,7 +324,7 @@
             "onebased": true
         },
         "x": 1150,
-        "y": 620,
+        "y": 260,
         "wires": [
             []
         ]
@@ -350,7 +350,7 @@
         "to": "",
         "reg": false,
         "x": 330,
-        "y": 140,
+        "y": 160,
         "wires": [
             []
         ]
@@ -376,7 +376,7 @@
         "to": "",
         "reg": false,
         "x": 330,
-        "y": 80,
+        "y": 100,
         "wires": [
             []
         ]
@@ -395,7 +395,7 @@
             "onebased": true
         },
         "x": 1150,
-        "y": 780,
+        "y": 420,
         "wires": [
             []
         ]
@@ -412,7 +412,7 @@
         ],
         "uncaught": false,
         "x": 150,
-        "y": 660,
+        "y": 300,
         "wires": [
             [
                 "531bf7640598891a"
@@ -443,7 +443,7 @@
         "repair": false,
         "outputs": 2,
         "x": 310,
-        "y": 660,
+        "y": 300,
         "wires": [
             [
                 "7315cd30a54e7361"
@@ -474,7 +474,7 @@
         "to": "",
         "reg": false,
         "x": 550,
-        "y": 640,
+        "y": 280,
         "wires": [
             [
                 "d48e0b95f59acf5e",
@@ -503,7 +503,7 @@
         "to": "",
         "reg": false,
         "x": 550,
-        "y": 700,
+        "y": 340,
         "wires": [
             [
                 "2dfb121870ec1887",
@@ -518,7 +518,7 @@
         "g": "cce4d4a2f7d1010e",
         "name": "Invert",
         "x": 950,
-        "y": 720,
+        "y": 360,
         "wires": [
             [
                 "2dfb121870ec1887"
@@ -532,7 +532,7 @@
         "g": "cce4d4a2f7d1010e",
         "name": "Invert",
         "x": 950,
-        "y": 660,
+        "y": 300,
         "wires": [
             [
                 "d48e0b95f59acf5e"
@@ -553,7 +553,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1120,
-        "y": 980,
+        "y": 580,
         "wires": []
     },
     {
@@ -571,10 +571,99 @@
         "trim": false,
         "tls": "",
         "x": 830,
-        "y": 980,
+        "y": 580,
         "wires": [
             [
-                "ad7571ef97919fa7"
+                "ad7571ef97919fa7",
+                "ee9c36ba5c57ef4c"
+            ]
+        ]
+    },
+    {
+        "id": "41760229ba0d45c5",
+        "type": "Command",
+        "z": "99303979d26972e1",
+        "name": "Dst 1 Btn Feedback",
+        "mojo": {
+            "device": "AMX-10001",
+            "command": "//port/3/channel/3",
+            "normalized": false,
+            "cmdvalue": "Message payload",
+            "onebased": true
+        },
+        "x": 1470,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "daea4e2d219464fa",
+        "type": "Command",
+        "z": "99303979d26972e1",
+        "name": "Dst 2 Btn Feedback",
+        "mojo": {
+            "device": "AMX-10001",
+            "command": "//port/3/channel/4",
+            "normalized": false,
+            "cmdvalue": "Message payload",
+            "onebased": true
+        },
+        "x": 1510,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ee9c36ba5c57ef4c",
+        "type": "switch",
+        "z": "99303979d26972e1",
+        "name": "Stream 2 Feedback",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "STREAM: 2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1070,
+        "y": 660,
+        "wires": [
+            [
+                "f6671d4b937320cf"
+            ]
+        ]
+    },
+    {
+        "id": "f6671d4b937320cf",
+        "type": "change",
+        "z": "99303979d26972e1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1300,
+        "y": 660,
+        "wires": [
+            [
+                "daea4e2d219464fa"
             ]
         ]
     }
