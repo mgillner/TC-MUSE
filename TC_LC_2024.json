@@ -16,30 +16,6 @@
         "env": []
     },
     {
-        "id": "a8bcc57f5ed46174",
-        "type": "group",
-        "z": "99303979d26972e1",
-        "name": "Destination Switching",
-        "style": {
-            "stroke": "#ff0000",
-            "label": true
-        },
-        "nodes": [
-            "f66b7135afd82214",
-            "8fee283e58160b11",
-            "a713c4846194b7e3",
-            "3e102018d4210968",
-            "832834d6272d5a74",
-            "6b8a96acc119638d",
-            "bc99e91caea7b6b1",
-            "ad7571ef97919fa7"
-        ],
-        "x": 54,
-        "y": 479,
-        "w": 1172,
-        "h": 142
-    },
-    {
         "id": "cce4d4a2f7d1010e",
         "type": "group",
         "z": "99303979d26972e1",
@@ -168,7 +144,6 @@
         "id": "f66b7135afd82214",
         "type": "UI Control",
         "z": "99303979d26972e1",
-        "g": "a8bcc57f5ed46174",
         "name": "Dec 1",
         "mojo": {
             "cp": "e92c9383ec1b9fbf",
@@ -182,7 +157,7 @@
             "state": "NONE"
         },
         "x": 130,
-        "y": 520,
+        "y": 700,
         "wires": [
             [
                 "3e102018d4210968"
@@ -193,7 +168,6 @@
         "id": "8fee283e58160b11",
         "type": "UI Control",
         "z": "99303979d26972e1",
-        "g": "a8bcc57f5ed46174",
         "name": "Dec 2",
         "mojo": {
             "cp": "e92c9383ec1b9fbf",
@@ -207,7 +181,7 @@
             "state": "NONE"
         },
         "x": 130,
-        "y": 580,
+        "y": 760,
         "wires": [
             [
                 "832834d6272d5a74"
@@ -218,7 +192,6 @@
         "id": "a713c4846194b7e3",
         "type": "tcp request",
         "z": "99303979d26972e1",
-        "g": "a8bcc57f5ed46174",
         "name": "Decoder 1",
         "server": "192.168.155.102",
         "port": "50002",
@@ -229,7 +202,7 @@
         "trim": false,
         "tls": "",
         "x": 830,
-        "y": 520,
+        "y": 700,
         "wires": [
             [
                 "6b8a96acc119638d",
@@ -241,7 +214,6 @@
         "id": "3e102018d4210968",
         "type": "change",
         "z": "99303979d26972e1",
-        "g": "a8bcc57f5ed46174",
         "name": "Decoder 1",
         "rules": [
             {
@@ -258,7 +230,7 @@
         "to": "",
         "reg": false,
         "x": 310,
-        "y": 520,
+        "y": 700,
         "wires": [
             [
                 "a713c4846194b7e3"
@@ -269,7 +241,6 @@
         "id": "832834d6272d5a74",
         "type": "change",
         "z": "99303979d26972e1",
-        "g": "a8bcc57f5ed46174",
         "name": "Decoder 2",
         "rules": [
             {
@@ -286,7 +257,7 @@
         "to": "",
         "reg": false,
         "x": 310,
-        "y": 580,
+        "y": 760,
         "wires": [
             [
                 "bc99e91caea7b6b1"
@@ -297,7 +268,6 @@
         "id": "6b8a96acc119638d",
         "type": "debug",
         "z": "99303979d26972e1",
-        "g": "a8bcc57f5ed46174",
         "name": "debug 2",
         "active": true,
         "tosidebar": true,
@@ -307,7 +277,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1120,
-        "y": 520,
+        "y": 700,
         "wires": []
     },
     {
@@ -544,7 +514,6 @@
         "id": "ad7571ef97919fa7",
         "type": "debug",
         "z": "99303979d26972e1",
-        "g": "a8bcc57f5ed46174",
         "name": "debug 3",
         "active": true,
         "tosidebar": true,
@@ -554,14 +523,13 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1120,
-        "y": 580,
+        "y": 760,
         "wires": []
     },
     {
         "id": "bc99e91caea7b6b1",
         "type": "tcp request",
         "z": "99303979d26972e1",
-        "g": "a8bcc57f5ed46174",
         "name": "Decoder 2",
         "server": "192.168.155.103",
         "port": "50002",
@@ -572,10 +540,11 @@
         "trim": false,
         "tls": "",
         "x": 830,
-        "y": 580,
+        "y": 760,
         "wires": [
             [
-                "ad7571ef97919fa7"
+                "ad7571ef97919fa7",
+                "a3e1918c47410896"
             ]
         ]
     },
@@ -592,8 +561,8 @@
             "args": "",
             "onebased": true
         },
-        "x": 1730,
-        "y": 480,
+        "x": 1670,
+        "y": 640,
         "wires": [
             []
         ]
@@ -610,8 +579,8 @@
             "cmdvalue": "Message payload",
             "onebased": true
         },
-        "x": 1730,
-        "y": 660,
+        "x": 1670,
+        "y": 840,
         "wires": [
             []
         ]
@@ -639,7 +608,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1150,
-        "y": 660,
+        "y": 640,
         "wires": [
             [
                 "ac649d08c62726bd"
@@ -669,29 +638,12 @@
         "to": "",
         "reg": false,
         "x": 1410,
-        "y": 540,
+        "y": 620,
         "wires": [
             [
-                "41760229ba0d45c5",
-                "c96f5d9d571cd9ae"
+                "41760229ba0d45c5"
             ]
         ]
-    },
-    {
-        "id": "c96f5d9d571cd9ae",
-        "type": "debug",
-        "z": "99303979d26972e1",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1700,
-        "y": 420,
-        "wires": []
     },
     {
         "id": "78cd8f7682f39208",
@@ -713,10 +665,97 @@
         "to": "",
         "reg": false,
         "x": 1410,
-        "y": 580,
+        "y": 660,
         "wires": [
             [
                 "41760229ba0d45c5"
+            ]
+        ]
+    },
+    {
+        "id": "a3e1918c47410896",
+        "type": "switch",
+        "z": "99303979d26972e1",
+        "name": "Stream 2 Feedback",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "STREAM:1",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "STREAM:2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1150,
+        "y": 840,
+        "wires": [
+            [
+                "2436dd0f7a725f94"
+            ],
+            [
+                "e4d4b2c80c14e451"
+            ]
+        ]
+    },
+    {
+        "id": "2436dd0f7a725f94",
+        "type": "change",
+        "z": "99303979d26972e1",
+        "name": "TP Command Data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "^TXT-3,0,1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1410,
+        "y": 820,
+        "wires": [
+            [
+                "daea4e2d219464fa"
+            ]
+        ]
+    },
+    {
+        "id": "e4d4b2c80c14e451",
+        "type": "change",
+        "z": "99303979d26972e1",
+        "name": "TP Command Data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "^TXT-3,0,2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1410,
+        "y": 860,
+        "wires": [
+            [
+                "daea4e2d219464fa"
             ]
         ]
     }
