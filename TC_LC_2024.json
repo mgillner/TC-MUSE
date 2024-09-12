@@ -306,7 +306,7 @@
         "name": "Source Feedback",
         "mojo": {
             "device": "AMX-10001",
-            "parameter": "//port/3/channel/1",
+            "parameter": "//port/3/button/1",
             "onebased": true
         },
         "x": 770,
