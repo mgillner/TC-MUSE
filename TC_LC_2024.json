@@ -60,6 +60,38 @@
         "h": 142
     },
     {
+        "id": "7beef2e93fcbb54d",
+        "type": "group",
+        "z": "99303979d26972e1",
+        "name": "Decoder Switching and Feedback",
+        "style": {
+            "stroke": "#ff0000",
+            "label": true
+        },
+        "nodes": [
+            "f66b7135afd82214",
+            "8fee283e58160b11",
+            "a713c4846194b7e3",
+            "3e102018d4210968",
+            "832834d6272d5a74",
+            "6b8a96acc119638d",
+            "ad7571ef97919fa7",
+            "bc99e91caea7b6b1",
+            "41760229ba0d45c5",
+            "daea4e2d219464fa",
+            "ee9c36ba5c57ef4c",
+            "ac649d08c62726bd",
+            "78cd8f7682f39208",
+            "a3e1918c47410896",
+            "2436dd0f7a725f94",
+            "e4d4b2c80c14e451"
+        ],
+        "x": 54,
+        "y": 479,
+        "w": 1392,
+        "h": 322
+    },
+    {
         "id": "b69aeef737b799da",
         "type": "Controller",
         "z": "a3a5297f6c4eb17b",
@@ -144,6 +176,7 @@
         "id": "f66b7135afd82214",
         "type": "UI Control",
         "z": "99303979d26972e1",
+        "g": "7beef2e93fcbb54d",
         "name": "Dec 1",
         "mojo": {
             "cp": "e92c9383ec1b9fbf",
@@ -157,7 +190,7 @@
             "state": "NONE"
         },
         "x": 130,
-        "y": 700,
+        "y": 600,
         "wires": [
             [
                 "3e102018d4210968"
@@ -168,6 +201,7 @@
         "id": "8fee283e58160b11",
         "type": "UI Control",
         "z": "99303979d26972e1",
+        "g": "7beef2e93fcbb54d",
         "name": "Dec 2",
         "mojo": {
             "cp": "e92c9383ec1b9fbf",
@@ -181,7 +215,7 @@
             "state": "NONE"
         },
         "x": 130,
-        "y": 760,
+        "y": 660,
         "wires": [
             [
                 "832834d6272d5a74"
@@ -192,6 +226,7 @@
         "id": "a713c4846194b7e3",
         "type": "tcp request",
         "z": "99303979d26972e1",
+        "g": "7beef2e93fcbb54d",
         "name": "Decoder 1",
         "server": "192.168.155.102",
         "port": "50002",
@@ -201,8 +236,8 @@
         "newline": "",
         "trim": false,
         "tls": "",
-        "x": 830,
-        "y": 700,
+        "x": 490,
+        "y": 600,
         "wires": [
             [
                 "6b8a96acc119638d",
@@ -214,6 +249,7 @@
         "id": "3e102018d4210968",
         "type": "change",
         "z": "99303979d26972e1",
+        "g": "7beef2e93fcbb54d",
         "name": "Decoder 1",
         "rules": [
             {
@@ -230,7 +266,7 @@
         "to": "",
         "reg": false,
         "x": 310,
-        "y": 700,
+        "y": 600,
         "wires": [
             [
                 "a713c4846194b7e3"
@@ -241,6 +277,7 @@
         "id": "832834d6272d5a74",
         "type": "change",
         "z": "99303979d26972e1",
+        "g": "7beef2e93fcbb54d",
         "name": "Decoder 2",
         "rules": [
             {
@@ -257,7 +294,7 @@
         "to": "",
         "reg": false,
         "x": 310,
-        "y": 760,
+        "y": 660,
         "wires": [
             [
                 "bc99e91caea7b6b1"
@@ -268,16 +305,18 @@
         "id": "6b8a96acc119638d",
         "type": "debug",
         "z": "99303979d26972e1",
-        "name": "debug 2",
+        "g": "7beef2e93fcbb54d",
+        "name": "Dec 1 Debug",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1120,
-        "y": 700,
+        "x": 790,
+        "y": 600,
         "wires": []
     },
     {
@@ -311,7 +350,7 @@
                 "t": "set",
                 "p": "svsi.src",
                 "pt": "flow",
-                "to": "set: 2",
+                "to": "set: 2\\r",
                 "tot": "str"
             }
         ],
@@ -337,7 +376,7 @@
                 "t": "set",
                 "p": "svsi.src",
                 "pt": "flow",
-                "to": "set: 1",
+                "to": "set: 1\\r",
                 "tot": "str"
             }
         ],
@@ -400,12 +439,12 @@
         "propertyType": "flow",
         "rules": [
             {
-                "t": "eq",
+                "t": "cont",
                 "v": "set: 1",
                 "vt": "str"
             },
             {
-                "t": "eq",
+                "t": "cont",
                 "v": "set: 2",
                 "vt": "str"
             }
@@ -514,22 +553,25 @@
         "id": "ad7571ef97919fa7",
         "type": "debug",
         "z": "99303979d26972e1",
-        "name": "debug 3",
+        "g": "7beef2e93fcbb54d",
+        "name": "Dec 2 Debug",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1120,
-        "y": 760,
+        "x": 790,
+        "y": 660,
         "wires": []
     },
     {
         "id": "bc99e91caea7b6b1",
         "type": "tcp request",
         "z": "99303979d26972e1",
+        "g": "7beef2e93fcbb54d",
         "name": "Decoder 2",
         "server": "192.168.155.103",
         "port": "50002",
@@ -539,8 +581,8 @@
         "newline": "",
         "trim": false,
         "tls": "",
-        "x": 830,
-        "y": 760,
+        "x": 490,
+        "y": 660,
         "wires": [
             [
                 "ad7571ef97919fa7",
@@ -552,6 +594,7 @@
         "id": "41760229ba0d45c5",
         "type": "Command",
         "z": "99303979d26972e1",
+        "g": "7beef2e93fcbb54d",
         "name": "Dst 1 Btn Feedback",
         "mojo": {
             "device": "AMX-10001",
@@ -561,8 +604,8 @@
             "args": "",
             "onebased": true
         },
-        "x": 1670,
-        "y": 640,
+        "x": 1330,
+        "y": 540,
         "wires": [
             []
         ]
@@ -571,6 +614,7 @@
         "id": "daea4e2d219464fa",
         "type": "Command",
         "z": "99303979d26972e1",
+        "g": "7beef2e93fcbb54d",
         "name": "Dst 2 Btn Feedback",
         "mojo": {
             "device": "AMX-10001",
@@ -579,8 +623,8 @@
             "cmdvalue": "Message payload",
             "onebased": true
         },
-        "x": 1670,
-        "y": 840,
+        "x": 1330,
+        "y": 740,
         "wires": [
             []
         ]
@@ -589,6 +633,7 @@
         "id": "ee9c36ba5c57ef4c",
         "type": "switch",
         "z": "99303979d26972e1",
+        "g": "7beef2e93fcbb54d",
         "name": "Dec 1 Stream Feedback",
         "property": "payload",
         "propertyType": "msg",
@@ -607,8 +652,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1170,
-        "y": 640,
+        "x": 830,
+        "y": 540,
         "wires": [
             [
                 "ac649d08c62726bd"
@@ -622,6 +667,7 @@
         "id": "ac649d08c62726bd",
         "type": "change",
         "z": "99303979d26972e1",
+        "g": "7beef2e93fcbb54d",
         "name": "TP Command Data",
         "rules": [
             {
@@ -637,8 +683,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1410,
-        "y": 620,
+        "x": 1070,
+        "y": 520,
         "wires": [
             [
                 "41760229ba0d45c5"
@@ -649,6 +695,7 @@
         "id": "78cd8f7682f39208",
         "type": "change",
         "z": "99303979d26972e1",
+        "g": "7beef2e93fcbb54d",
         "name": "TP Command Data",
         "rules": [
             {
@@ -664,8 +711,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1410,
-        "y": 660,
+        "x": 1070,
+        "y": 560,
         "wires": [
             [
                 "41760229ba0d45c5"
@@ -676,6 +723,7 @@
         "id": "a3e1918c47410896",
         "type": "switch",
         "z": "99303979d26972e1",
+        "g": "7beef2e93fcbb54d",
         "name": "Dec 2 Stream Feedback",
         "property": "payload",
         "propertyType": "msg",
@@ -694,8 +742,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1170,
-        "y": 840,
+        "x": 830,
+        "y": 740,
         "wires": [
             [
                 "2436dd0f7a725f94"
@@ -709,6 +757,7 @@
         "id": "2436dd0f7a725f94",
         "type": "change",
         "z": "99303979d26972e1",
+        "g": "7beef2e93fcbb54d",
         "name": "TP Command Data",
         "rules": [
             {
@@ -724,8 +773,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1410,
-        "y": 820,
+        "x": 1070,
+        "y": 720,
         "wires": [
             [
                 "daea4e2d219464fa"
@@ -736,6 +785,7 @@
         "id": "e4d4b2c80c14e451",
         "type": "change",
         "z": "99303979d26972e1",
+        "g": "7beef2e93fcbb54d",
         "name": "TP Command Data",
         "rules": [
             {
@@ -751,8 +801,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1410,
-        "y": 860,
+        "x": 1070,
+        "y": 760,
         "wires": [
             [
                 "daea4e2d219464fa"
