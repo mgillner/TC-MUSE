@@ -111,9 +111,11 @@
             "state": "NONE"
         },
         "x": 130,
-        "y": 200,
+        "y": 220,
         "wires": [
-            []
+            [
+                "3e102018d4210968"
+            ]
         ]
     },
     {
@@ -133,9 +135,11 @@
             "state": "NONE"
         },
         "x": 130,
-        "y": 260,
+        "y": 280,
         "wires": [
-            []
+            [
+                "832834d6272d5a74"
+            ]
         ]
     },
     {
@@ -148,8 +152,8 @@
                 "t": "set",
                 "p": "svsi.src",
                 "pt": "flow",
-                "to": "1",
-                "tot": "num"
+                "to": "set: 1",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -173,8 +177,8 @@
                 "t": "set",
                 "p": "svsi.src",
                 "pt": "flow",
-                "to": "2",
-                "tot": "num"
+                "to": "set: 2",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -184,6 +188,94 @@
         "reg": false,
         "x": 430,
         "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a713c4846194b7e3",
+        "type": "tcp request",
+        "z": "99303979d26972e1",
+        "name": "Decoder 1",
+        "server": "192.168.155.102",
+        "port": "50002",
+        "out": "time",
+        "ret": "buffer",
+        "splitc": "1000",
+        "newline": "",
+        "trim": false,
+        "tls": "",
+        "x": 830,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3e102018d4210968",
+        "type": "change",
+        "z": "99303979d26972e1",
+        "name": "Decoder 1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "svsi.src",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 310,
+        "y": 220,
+        "wires": [
+            [
+                "46cb9df474230d4c",
+                "a713c4846194b7e3"
+            ]
+        ]
+    },
+    {
+        "id": "46cb9df474230d4c",
+        "type": "debug",
+        "z": "99303979d26972e1",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "832834d6272d5a74",
+        "type": "change",
+        "z": "99303979d26972e1",
+        "name": "Decoder 2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "svsi.src",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 310,
+        "y": 280,
         "wires": [
             []
         ]
