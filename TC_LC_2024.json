@@ -625,7 +625,7 @@
         "rules": [
             {
                 "t": "cont",
-                "v": "STREAM: 2",
+                "v": "STREAM:2",
                 "vt": "str"
             }
         ],
