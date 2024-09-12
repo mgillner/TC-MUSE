@@ -2,7 +2,15 @@
     {
         "id": "a3a5297f6c4eb17b",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "Main",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "99303979d26972e1",
+        "type": "tab",
+        "label": "SVSI Switching",
         "disabled": false,
         "info": "",
         "env": []
@@ -31,11 +39,23 @@
         "name": "LC Varia SL-80",
         "mojo": {
             "device": "AMX-10001",
-            "md5": "3b91205f9afe63cfdedd874c25675c8a",
+            "md5": "503b448e83599a0ecb5277f030dd954d",
             "tp5": "TC Lets Connect 2024.TP5"
         },
         "x": 420,
         "y": 60,
         "wires": []
+    },
+    {
+        "id": "10f02cef85fb5ff9",
+        "type": "UI Control",
+        "z": "99303979d26972e1",
+        "name": "UI Control",
+        "mojo": {},
+        "x": 140,
+        "y": 80,
+        "wires": [
+            []
+        ]
     }
 ]
