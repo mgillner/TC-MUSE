@@ -588,7 +588,8 @@
             "device": "AMX-10001",
             "command": "//port/3/send_command",
             "normalized": false,
-            "cmdvalue": "Manual configuration",
+            "cmdvalue": "Message payload",
+            "args": "",
             "onebased": true
         },
         "x": 1730,
@@ -643,31 +644,6 @@
             [
                 "ac649d08c62726bd"
             ],
-            []
-        ]
-    },
-    {
-        "id": "8b9182988cf0bada",
-        "type": "change",
-        "z": "99303979d26972e1",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 500,
-        "y": 780,
-        "wires": [
             []
         ]
     },
