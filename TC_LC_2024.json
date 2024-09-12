@@ -338,13 +338,6 @@
                 "pt": "flow",
                 "to": "set: 1",
                 "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
             }
         ],
         "action": "",
