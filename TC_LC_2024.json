@@ -586,13 +586,13 @@
         "name": "Dst 1 Btn Feedback",
         "mojo": {
             "device": "AMX-10001",
-            "command": "//port/3/channel/3",
+            "command": "//port/3/send_command",
             "normalized": false,
-            "cmdvalue": "Message payload",
+            "cmdvalue": "Manual configuration",
             "onebased": true
         },
-        "x": 1470,
-        "y": 520,
+        "x": 1730,
+        "y": 480,
         "wires": [
             []
         ]
@@ -609,7 +609,7 @@
             "cmdvalue": "Message payload",
             "onebased": true
         },
-        "x": 1510,
+        "x": 1730,
         "y": 660,
         "wires": [
             []
@@ -625,24 +625,29 @@
         "rules": [
             {
                 "t": "cont",
+                "v": "STREAM:1",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
                 "v": "STREAM:2",
                 "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 1,
-        "x": 1070,
+        "outputs": 2,
+        "x": 1150,
         "y": 660,
         "wires": [
             [
-                "f6671d4b937320cf",
-                "e60144e60e9e1179"
-            ]
+                "ac649d08c62726bd"
+            ],
+            []
         ]
     },
     {
-        "id": "f6671d4b937320cf",
+        "id": "8b9182988cf0bada",
         "type": "change",
         "z": "99303979d26972e1",
         "name": "",
@@ -651,8 +656,8 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "true",
-                "tot": "bool"
+                "to": "",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -660,16 +665,42 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1300,
-        "y": 660,
+        "x": 500,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ac649d08c62726bd",
+        "type": "change",
+        "z": "99303979d26972e1",
+        "name": "TP Command Data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "^TXT-3,0,1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1410,
+        "y": 540,
         "wires": [
             [
-                "daea4e2d219464fa"
+                "41760229ba0d45c5",
+                "c96f5d9d571cd9ae"
             ]
         ]
     },
     {
-        "id": "e60144e60e9e1179",
+        "id": "c96f5d9d571cd9ae",
         "type": "debug",
         "z": "99303979d26972e1",
         "name": "debug 4",
@@ -680,8 +711,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1300,
-        "y": 740,
+        "x": 1700,
+        "y": 420,
         "wires": []
     }
 ]
