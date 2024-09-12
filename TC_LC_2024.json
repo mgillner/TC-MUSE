@@ -200,7 +200,7 @@
         "server": "192.168.155.102",
         "port": "50002",
         "out": "time",
-        "ret": "buffer",
+        "ret": "string",
         "splitc": "1000",
         "newline": "",
         "trim": false,
