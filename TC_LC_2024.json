@@ -143,32 +143,6 @@
         "h": 282
     },
     {
-        "id": "58fc07840685c457",
-        "type": "group",
-        "z": "99303979d26972e1",
-        "style": {
-            "stroke": "rgba(68, 71, 90, 0.75)",
-            "stroke-opacity": "1",
-            "fill": "#21222c",
-            "fill-opacity": "0.5",
-            "label": true,
-            "label-position": "nw",
-            "color": "#f8f8f2"
-        },
-        "nodes": [
-            "0fbd423d9b397414",
-            "755ad1eb6da5c6d2",
-            "2b44c71c19f85f9b",
-            "b9b745c1f830cabe",
-            "92e6284e44021742",
-            "95e4977e14fbf4a9"
-        ],
-        "x": 54,
-        "y": 939,
-        "w": 712,
-        "h": 142
-    },
-    {
         "id": "a436d33e13c9e46c",
         "type": "group",
         "z": "99303979d26972e1",
@@ -191,6 +165,30 @@
         "y": 1099,
         "w": 1232,
         "h": 242
+    },
+    {
+        "id": "96b236bf1accae18",
+        "type": "group",
+        "z": "99303979d26972e1",
+        "style": {
+            "stroke": "rgba(68, 71, 90, 0.75)",
+            "stroke-opacity": "1",
+            "fill": "#21222c",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#f8f8f2"
+        },
+        "nodes": [
+            "54e543eaed3da0f2",
+            "9a08edbb202961f4",
+            "92e6284e44021742",
+            "95e4977e14fbf4a9"
+        ],
+        "x": 54,
+        "y": 939,
+        "w": 372,
+        "h": 142
     },
     {
         "id": "b69aeef737b799da",
@@ -216,7 +214,7 @@
         "name": "LC Varia SL-80",
         "mojo": {
             "device": "AMX-10001",
-            "md5": "0079fee2ffb7e8f6e3a108eb3df8175e",
+            "md5": "fc85688dd6466ba21021706dfb8973ce",
             "tp5": "TC Lets Connect 2024.TP5"
         },
         "x": 420,
@@ -911,115 +909,10 @@
         ]
     },
     {
-        "id": "2b44c71c19f85f9b",
-        "type": "UI Control",
-        "z": "99303979d26972e1",
-        "g": "58fc07840685c457",
-        "name": "USB Src 1",
-        "mojo": {
-            "cp": "e92c9383ec1b9fbf",
-            "type": "BUTTON",
-            "path": "//505/15",
-            "locator": {
-                "ccode": 5,
-                "cport": 3
-            },
-            "trigger": "PUSH",
-            "state": "NONE"
-        },
-        "x": 140,
-        "y": 980,
-        "wires": [
-            [
-                "95e4977e14fbf4a9"
-            ]
-        ]
-    },
-    {
-        "id": "b9b745c1f830cabe",
-        "type": "UI Control",
-        "z": "99303979d26972e1",
-        "g": "58fc07840685c457",
-        "name": "USB Src 2",
-        "mojo": {
-            "cp": "e92c9383ec1b9fbf",
-            "type": "BUTTON",
-            "path": "//505/14",
-            "locator": {
-                "ccode": 6,
-                "cport": 3
-            },
-            "trigger": "PUSH",
-            "state": "NONE"
-        },
-        "x": 140,
-        "y": 1040,
-        "wires": [
-            [
-                "92e6284e44021742"
-            ]
-        ]
-    },
-    {
-        "id": "92e6284e44021742",
-        "type": "change",
-        "z": "99303979d26972e1",
-        "g": "58fc07840685c457",
-        "name": "Set USB 2",
-        "rules": [
-            {
-                "t": "set",
-                "p": "usb",
-                "pt": "flow",
-                "to": "KVMUSB20MainIP:192.168.155.101",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 330,
-        "y": 1040,
-        "wires": [
-            [
-                "755ad1eb6da5c6d2"
-            ]
-        ]
-    },
-    {
-        "id": "95e4977e14fbf4a9",
-        "type": "change",
-        "z": "99303979d26972e1",
-        "g": "58fc07840685c457",
-        "name": "Set USB 1",
-        "rules": [
-            {
-                "t": "set",
-                "p": "usb",
-                "pt": "flow",
-                "to": "KVMUSB20MainIP:192.168.155.100",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 330,
-        "y": 980,
-        "wires": [
-            [
-                "0fbd423d9b397414"
-            ]
-        ]
-    },
-    {
         "id": "54e543eaed3da0f2",
         "type": "UI Control",
         "z": "99303979d26972e1",
+        "g": "96b236bf1accae18",
         "name": "Host 1",
         "mojo": {
             "cp": "e92c9383ec1b9fbf",
@@ -1035,10 +928,10 @@
             "state": "NONE"
         },
         "x": 130,
-        "y": 840,
+        "y": 980,
         "wires": [
             [
-                "d5316fd5632f31e3"
+                "95e4977e14fbf4a9"
             ]
         ]
     },
@@ -1046,6 +939,7 @@
         "id": "9a08edbb202961f4",
         "type": "UI Control",
         "z": "99303979d26972e1",
+        "g": "96b236bf1accae18",
         "name": "Host 2",
         "mojo": {
             "cp": "e92c9383ec1b9fbf",
@@ -1061,104 +955,12 @@
             "state": "NONE"
         },
         "x": 130,
-        "y": 900,
-        "wires": [
-            [
-                "2bdfcdf6c2130d57"
-            ]
-        ]
-    },
-    {
-        "id": "d5316fd5632f31e3",
-        "type": "change",
-        "z": "99303979d26972e1",
-        "name": "Host 1",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "usb",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 290,
-        "y": 840,
-        "wires": [
-            [
-                "f3efb37fd6c0ba59",
-                "a713c4846194b7e3"
-            ]
-        ]
-    },
-    {
-        "id": "2bdfcdf6c2130d57",
-        "type": "change",
-        "z": "99303979d26972e1",
-        "name": "Host 2",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "usb",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 290,
-        "y": 900,
-        "wires": [
-            [
-                "db44b6d05b611750",
-                "bc99e91caea7b6b1"
-            ]
-        ]
-    },
-    {
-        "id": "0fbd423d9b397414",
-        "type": "debug",
-        "z": "99303979d26972e1",
-        "g": "58fc07840685c457",
-        "name": "USB debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 650,
-        "y": 980,
-        "wires": []
-    },
-    {
-        "id": "755ad1eb6da5c6d2",
-        "type": "debug",
-        "z": "99303979d26972e1",
-        "g": "58fc07840685c457",
-        "name": "USB debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 650,
         "y": 1040,
-        "wires": []
+        "wires": [
+            [
+                "92e6284e44021742"
+            ]
+        ]
     },
     {
         "id": "b43ad0be6cc8d583",
@@ -1168,7 +970,7 @@
         "name": "USB1 Btn Feedback",
         "mojo": {
             "device": "AMX-10001",
-            "command": "//port/3/channel/5",
+            "command": "//port/3/channel/7",
             "normalized": false,
             "cmdvalue": "Message payload",
             "onebased": true
@@ -1187,7 +989,7 @@
         "name": "Src 2 Btn Feedback",
         "mojo": {
             "device": "AMX-10001",
-            "command": "//port/3/channel/6",
+            "command": "//port/3/channel/8",
             "normalized": false,
             "cmdvalue": "Message payload",
             "onebased": true
@@ -1205,8 +1007,8 @@
         "g": "a436d33e13c9e46c",
         "name": "",
         "scope": [
-            "95e4977e14fbf4a9",
-            "92e6284e44021742"
+            "92e6284e44021742",
+            "95e4977e14fbf4a9"
         ],
         "uncaught": false,
         "x": 150,
@@ -1227,14 +1029,14 @@
         "propertyType": "flow",
         "rules": [
             {
-                "t": "cont",
-                "v": "KVMUSB20MainIP:192.168.155.100",
-                "vt": "str"
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
             },
             {
-                "t": "cont",
-                "v": "KVMUSB20MainIP:192.168.155.101",
-                "vt": "str"
+                "t": "eq",
+                "v": "2",
+                "vt": "num"
             }
         ],
         "checkall": "true",
@@ -1338,36 +1140,154 @@
         ]
     },
     {
-        "id": "f3efb37fd6c0ba59",
-        "type": "debug",
+        "id": "2b44c71c19f85f9b",
+        "type": "UI Control",
         "z": "99303979d26972e1",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 560,
+        "name": "USB Src 1",
+        "mojo": {
+            "cp": "e92c9383ec1b9fbf",
+            "type": "BUTTON",
+            "path": "//505/15",
+            "locator": {
+                "ccode": 5,
+                "cport": 3
+            },
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 140,
         "y": 840,
-        "wires": []
+        "wires": [
+            []
+        ]
     },
     {
-        "id": "db44b6d05b611750",
-        "type": "debug",
+        "id": "b9b745c1f830cabe",
+        "type": "UI Control",
         "z": "99303979d26972e1",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 560,
-        "y": 900,
-        "wires": []
+        "name": "USB Src 2",
+        "mojo": {
+            "cp": "e92c9383ec1b9fbf",
+            "type": "BUTTON",
+            "path": "//505/14",
+            "locator": {
+                "ccode": 6,
+                "cport": 3
+            },
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 140,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "92e6284e44021742",
+        "type": "change",
+        "z": "99303979d26972e1",
+        "g": "96b236bf1accae18",
+        "name": "Set USB 2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "usb",
+                "pt": "flow",
+                "to": "2",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "95e4977e14fbf4a9",
+        "type": "change",
+        "z": "99303979d26972e1",
+        "g": "96b236bf1accae18",
+        "name": "Set USB 1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "usb",
+                "pt": "flow",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d3d5ef6550eef073",
+        "type": "change",
+        "z": "99303979d26972e1",
+        "name": "Switch Decoder 1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "KVMUSB20MainIP:192.168.155.100",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 840,
+        "wires": [
+            [
+                "a713c4846194b7e3"
+            ]
+        ]
+    },
+    {
+        "id": "98343ffc5ade7826",
+        "type": "change",
+        "z": "99303979d26972e1",
+        "name": "Switch Decoder 2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "KVMUSB20MainIP:192.168.155.101",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 880,
+        "wires": [
+            [
+                "bc99e91caea7b6b1"
+            ]
+        ]
     },
     {
         "id": "79e443be8ca8e2c2",
