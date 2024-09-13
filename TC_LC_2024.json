@@ -143,6 +143,26 @@
         "h": 282
     },
     {
+        "id": "b7fb86860a95678b",
+        "type": "group",
+        "z": "99303979d26972e1",
+        "name": "USB Switching",
+        "style": {
+            "stroke": "#7fb7df",
+            "label": true
+        },
+        "nodes": [
+            "2b44c71c19f85f9b",
+            "b9b745c1f830cabe",
+            "92e6284e44021742",
+            "95e4977e14fbf4a9"
+        ],
+        "x": 54,
+        "y": 819,
+        "w": 372,
+        "h": 142
+    },
+    {
         "id": "b69aeef737b799da",
         "type": "Controller",
         "z": "a3a5297f6c4eb17b",
@@ -166,7 +186,7 @@
         "name": "LC Varia SL-80",
         "mojo": {
             "device": "AMX-10001",
-            "md5": "f622ebeb058f774d4391cbfc54d1291f",
+            "md5": "a071e82404b7efa87d330a31e2e7aa3f",
             "tp5": "TC Lets Connect 2024.TP5"
         },
         "x": 420,
@@ -858,6 +878,108 @@
             [
                 "daea4e2d219464fa"
             ]
+        ]
+    },
+    {
+        "id": "2b44c71c19f85f9b",
+        "type": "UI Control",
+        "z": "99303979d26972e1",
+        "g": "b7fb86860a95678b",
+        "name": "USB Src 1",
+        "mojo": {
+            "cp": "e92c9383ec1b9fbf",
+            "type": "BUTTON",
+            "path": "//505/3",
+            "locator": {
+                "ccode": 1,
+                "cport": 3
+            },
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 140,
+        "y": 860,
+        "wires": [
+            [
+                "95e4977e14fbf4a9"
+            ]
+        ]
+    },
+    {
+        "id": "b9b745c1f830cabe",
+        "type": "UI Control",
+        "z": "99303979d26972e1",
+        "g": "b7fb86860a95678b",
+        "name": "Source 2",
+        "mojo": {
+            "cp": "e92c9383ec1b9fbf",
+            "type": "BUTTON",
+            "path": "//505/2",
+            "locator": {
+                "ccode": 2,
+                "cport": 3
+            },
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 140,
+        "y": 920,
+        "wires": [
+            [
+                "92e6284e44021742"
+            ]
+        ]
+    },
+    {
+        "id": "92e6284e44021742",
+        "type": "change",
+        "z": "99303979d26972e1",
+        "g": "b7fb86860a95678b",
+        "name": "Set SRC 2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "svsi.src",
+                "pt": "flow",
+                "to": "set: 2\\r",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "95e4977e14fbf4a9",
+        "type": "change",
+        "z": "99303979d26972e1",
+        "g": "b7fb86860a95678b",
+        "name": "Set SRC 1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "svsi.src",
+                "pt": "flow",
+                "to": "set: 1\\r",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 860,
+        "wires": [
+            []
         ]
     },
     {
