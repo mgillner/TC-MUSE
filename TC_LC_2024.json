@@ -919,9 +919,11 @@
         "mojo": {
             "cp": "e92c9383ec1b9fbf",
             "type": "BUTTON",
-            "path": "//505/15",
+            "path": "//505/19",
             "locator": {
-                "ccode": 1,
+                "acode": 7,
+                "aport": 3,
+                "ccode": 7,
                 "cport": 3
             },
             "trigger": "PUSH",
@@ -944,9 +946,11 @@
         "mojo": {
             "cp": "e92c9383ec1b9fbf",
             "type": "BUTTON",
-            "path": "//505/14",
+            "path": "//505/21",
             "locator": {
-                "ccode": 2,
+                "acode": 8,
+                "aport": 3,
+                "ccode": 8,
                 "cport": 3
             },
             "trigger": "PUSH",
