@@ -939,7 +939,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "svsi.usb",
+                "p": "usb",
                 "pt": "flow",
                 "to": "KVMUSB20MainIP:192.168.155.101",
                 "tot": "str"
@@ -967,7 +967,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "svsi.usb",
+                "p": "usb",
                 "pt": "flow",
                 "to": "KVMUSB20MainIP:192.168.155.100",
                 "tot": "str"
@@ -1048,7 +1048,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "svsi.usb",
+                "to": "usb",
                 "tot": "flow"
             }
         ],
@@ -1075,7 +1075,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "svsi.usb",
+                "to": "usb",
                 "tot": "flow"
             }
         ],
