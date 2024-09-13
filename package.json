@@ -2,7 +2,9 @@
     "name": "TC_Lets_Connect_2024",
     "description": "Techni+Contact - Let's Connect 2024 Roadshow",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "com-amx-mojo-nodes": "1.0.0"
+    },
     "node-red": {
         "settings": {
             "flowFile": "TC_LC_2024.json",
