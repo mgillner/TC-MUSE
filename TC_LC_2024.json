@@ -889,7 +889,7 @@
         "mojo": {
             "cp": "e92c9383ec1b9fbf",
             "type": "BUTTON",
-            "path": "//505/3",
+            "path": "//505/15",
             "locator": {
                 "ccode": 1,
                 "cport": 3
@@ -910,11 +910,11 @@
         "type": "UI Control",
         "z": "99303979d26972e1",
         "g": "b7fb86860a95678b",
-        "name": "Source 2",
+        "name": "USB Src 2",
         "mojo": {
             "cp": "e92c9383ec1b9fbf",
             "type": "BUTTON",
-            "path": "//505/2",
+            "path": "//505/14",
             "locator": {
                 "ccode": 2,
                 "cport": 3
@@ -939,9 +939,9 @@
         "rules": [
             {
                 "t": "set",
-                "p": "svsi.src",
+                "p": "svsi.usb",
                 "pt": "flow",
-                "to": "set: 2\\r",
+                "to": "KVMUSB20MainIP:192.168.155.101",
                 "tot": "str"
             }
         ],
@@ -961,13 +961,13 @@
         "type": "change",
         "z": "99303979d26972e1",
         "g": "b7fb86860a95678b",
-        "name": "Set SRC 1",
+        "name": "Set USB 1",
         "rules": [
             {
                 "t": "set",
-                "p": "svsi.src",
+                "p": "svsi.usb",
                 "pt": "flow",
-                "to": "set: 1\\r",
+                "to": "KVMUSB20MainIP:192.168.155.100",
                 "tot": "str"
             }
         ],
