@@ -163,7 +163,7 @@
         ],
         "x": 54,
         "y": 1099,
-        "w": 1232,
+        "w": 1212,
         "h": 242
     },
     {
@@ -917,11 +917,9 @@
         "mojo": {
             "cp": "e92c9383ec1b9fbf",
             "type": "BUTTON",
-            "path": "//505/19",
+            "path": "//505/15",
             "locator": {
-                "acode": 7,
-                "aport": 3,
-                "ccode": 7,
+                "ccode": 5,
                 "cport": 3
             },
             "trigger": "PUSH",
@@ -944,11 +942,9 @@
         "mojo": {
             "cp": "e92c9383ec1b9fbf",
             "type": "BUTTON",
-            "path": "//505/21",
+            "path": "//505/14",
             "locator": {
-                "acode": 8,
-                "aport": 3,
-                "ccode": 8,
+                "ccode": 6,
                 "cport": 3
             },
             "trigger": "PUSH",
@@ -967,15 +963,15 @@
         "type": "Command",
         "z": "99303979d26972e1",
         "g": "a436d33e13c9e46c",
-        "name": "USB1 Btn Feedback",
+        "name": "Host 1 Feedback",
         "mojo": {
             "device": "AMX-10001",
-            "command": "//port/3/channel/7",
+            "command": "//port/3/channel/5",
             "normalized": false,
             "cmdvalue": "Message payload",
             "onebased": true
         },
-        "x": 1160,
+        "x": 1150,
         "y": 1140,
         "wires": [
             []
@@ -986,10 +982,10 @@
         "type": "Command",
         "z": "99303979d26972e1",
         "g": "a436d33e13c9e46c",
-        "name": "Src 2 Btn Feedback",
+        "name": "Host 2 Feedback",
         "mojo": {
             "device": "AMX-10001",
-            "command": "//port/3/channel/8",
+            "command": "//port/3/channel/6",
             "normalized": false,
             "cmdvalue": "Message payload",
             "onebased": true
@@ -1029,14 +1025,14 @@
         "propertyType": "flow",
         "rules": [
             {
-                "t": "eq",
-                "v": "1",
-                "vt": "num"
+                "t": "cont",
+                "v": "KVMUSB20MainIP:192.168.155.100",
+                "vt": "str"
             },
             {
-                "t": "eq",
-                "v": "2",
-                "vt": "num"
+                "t": "cont",
+                "v": "KVMUSB20MainIP:192.168.155.101",
+                "vt": "str"
             }
         ],
         "checkall": "true",
@@ -1147,9 +1143,11 @@
         "mojo": {
             "cp": "e92c9383ec1b9fbf",
             "type": "BUTTON",
-            "path": "//505/15",
+            "path": "//505/19",
             "locator": {
-                "ccode": 5,
+                "acode": 7,
+                "aport": 3,
+                "ccode": 7,
                 "cport": 3
             },
             "trigger": "PUSH",
@@ -1158,7 +1156,9 @@
         "x": 140,
         "y": 840,
         "wires": [
-            []
+            [
+                "97204662a3e5a771"
+            ]
         ]
     },
     {
@@ -1169,9 +1169,11 @@
         "mojo": {
             "cp": "e92c9383ec1b9fbf",
             "type": "BUTTON",
-            "path": "//505/14",
+            "path": "//505/21",
             "locator": {
-                "ccode": 6,
+                "acode": 8,
+                "aport": 3,
+                "ccode": 8,
                 "cport": 3
             },
             "trigger": "PUSH",
@@ -1180,7 +1182,9 @@
         "x": 140,
         "y": 880,
         "wires": [
-            []
+            [
+                "1e86be248effc817"
+            ]
         ]
     },
     {
@@ -1194,8 +1198,8 @@
                 "t": "set",
                 "p": "usb",
                 "pt": "flow",
-                "to": "2",
-                "tot": "num"
+                "to": "KVMUSB20MainIP:192.168.155.100",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -1220,8 +1224,8 @@
                 "t": "set",
                 "p": "usb",
                 "pt": "flow",
-                "to": "1",
-                "tot": "num"
+                "to": "KVMUSB20MainIP:192.168.155.100",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -1236,17 +1240,17 @@
         ]
     },
     {
-        "id": "d3d5ef6550eef073",
+        "id": "97204662a3e5a771",
         "type": "change",
         "z": "99303979d26972e1",
-        "name": "Switch Decoder 1",
+        "name": "USB to Decoder 1",
         "rules": [
             {
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "KVMUSB20MainIP:192.168.155.100",
-                "tot": "str"
+                "to": "usb",
+                "tot": "flow"
             }
         ],
         "action": "",
@@ -1254,7 +1258,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 370,
+        "x": 330,
         "y": 840,
         "wires": [
             [
@@ -1263,17 +1267,17 @@
         ]
     },
     {
-        "id": "98343ffc5ade7826",
+        "id": "1e86be248effc817",
         "type": "change",
         "z": "99303979d26972e1",
-        "name": "Switch Decoder 2",
+        "name": "USB to Decoder 2",
         "rules": [
             {
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "KVMUSB20MainIP:192.168.155.101",
-                "tot": "str"
+                "to": "usb",
+                "tot": "flow"
             }
         ],
         "action": "",
@@ -1281,7 +1285,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 370,
+        "x": 330,
         "y": 880,
         "wires": [
             [
