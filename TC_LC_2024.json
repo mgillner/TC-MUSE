@@ -162,33 +162,33 @@
             "d582dc097865d964"
         ],
         "x": 54,
-        "y": 1099,
+        "y": 1119,
         "w": 1212,
         "h": 242
     },
     {
-        "id": "96b236bf1accae18",
+        "id": "ac78aa98feda1acc",
         "type": "group",
         "z": "99303979d26972e1",
+        "name": "USB Switching",
         "style": {
-            "stroke": "rgba(68, 71, 90, 0.75)",
-            "stroke-opacity": "1",
-            "fill": "#21222c",
-            "fill-opacity": "0.5",
-            "label": true,
-            "label-position": "nw",
-            "color": "#f8f8f2"
+            "stroke": "#0070c0",
+            "label": true
         },
         "nodes": [
             "54e543eaed3da0f2",
             "9a08edbb202961f4",
+            "2b44c71c19f85f9b",
+            "b9b745c1f830cabe",
             "92e6284e44021742",
-            "95e4977e14fbf4a9"
+            "95e4977e14fbf4a9",
+            "97204662a3e5a771",
+            "1e86be248effc817"
         ],
         "x": 54,
-        "y": 939,
-        "w": 372,
-        "h": 142
+        "y": 819,
+        "w": 392,
+        "h": 282
     },
     {
         "id": "b69aeef737b799da",
@@ -912,7 +912,7 @@
         "id": "54e543eaed3da0f2",
         "type": "UI Control",
         "z": "99303979d26972e1",
-        "g": "96b236bf1accae18",
+        "g": "ac78aa98feda1acc",
         "name": "Host 1",
         "mojo": {
             "cp": "e92c9383ec1b9fbf",
@@ -926,7 +926,7 @@
             "state": "NONE"
         },
         "x": 130,
-        "y": 980,
+        "y": 1000,
         "wires": [
             [
                 "95e4977e14fbf4a9"
@@ -937,7 +937,7 @@
         "id": "9a08edbb202961f4",
         "type": "UI Control",
         "z": "99303979d26972e1",
-        "g": "96b236bf1accae18",
+        "g": "ac78aa98feda1acc",
         "name": "Host 2",
         "mojo": {
             "cp": "e92c9383ec1b9fbf",
@@ -951,7 +951,7 @@
             "state": "NONE"
         },
         "x": 130,
-        "y": 1040,
+        "y": 1060,
         "wires": [
             [
                 "92e6284e44021742"
@@ -972,7 +972,7 @@
             "onebased": true
         },
         "x": 1150,
-        "y": 1140,
+        "y": 1160,
         "wires": [
             []
         ]
@@ -991,7 +991,7 @@
             "onebased": true
         },
         "x": 1150,
-        "y": 1300,
+        "y": 1320,
         "wires": [
             []
         ]
@@ -1008,7 +1008,7 @@
         ],
         "uncaught": false,
         "x": 150,
-        "y": 1180,
+        "y": 1200,
         "wires": [
             [
                 "d5bd99b6748b71f8"
@@ -1039,7 +1039,7 @@
         "repair": false,
         "outputs": 2,
         "x": 310,
-        "y": 1180,
+        "y": 1200,
         "wires": [
             [
                 "a282f1eae1ed92db"
@@ -1070,7 +1070,7 @@
         "to": "",
         "reg": false,
         "x": 550,
-        "y": 1160,
+        "y": 1180,
         "wires": [
             [
                 "b43ad0be6cc8d583",
@@ -1099,7 +1099,7 @@
         "to": "",
         "reg": false,
         "x": 550,
-        "y": 1220,
+        "y": 1240,
         "wires": [
             [
                 "73d3ce454b192b0d",
@@ -1114,7 +1114,7 @@
         "g": "a436d33e13c9e46c",
         "name": "Invert",
         "x": 950,
-        "y": 1240,
+        "y": 1260,
         "wires": [
             [
                 "73d3ce454b192b0d"
@@ -1128,7 +1128,7 @@
         "g": "a436d33e13c9e46c",
         "name": "Invert",
         "x": 950,
-        "y": 1180,
+        "y": 1200,
         "wires": [
             [
                 "b43ad0be6cc8d583"
@@ -1139,6 +1139,7 @@
         "id": "2b44c71c19f85f9b",
         "type": "UI Control",
         "z": "99303979d26972e1",
+        "g": "ac78aa98feda1acc",
         "name": "USB Src 1",
         "mojo": {
             "cp": "e92c9383ec1b9fbf",
@@ -1154,7 +1155,7 @@
             "state": "NONE"
         },
         "x": 140,
-        "y": 840,
+        "y": 860,
         "wires": [
             [
                 "97204662a3e5a771"
@@ -1165,6 +1166,7 @@
         "id": "b9b745c1f830cabe",
         "type": "UI Control",
         "z": "99303979d26972e1",
+        "g": "ac78aa98feda1acc",
         "name": "USB Src 2",
         "mojo": {
             "cp": "e92c9383ec1b9fbf",
@@ -1180,7 +1182,7 @@
             "state": "NONE"
         },
         "x": 140,
-        "y": 880,
+        "y": 900,
         "wires": [
             [
                 "1e86be248effc817"
@@ -1191,7 +1193,7 @@
         "id": "92e6284e44021742",
         "type": "change",
         "z": "99303979d26972e1",
-        "g": "96b236bf1accae18",
+        "g": "ac78aa98feda1acc",
         "name": "Set USB 2",
         "rules": [
             {
@@ -1208,7 +1210,7 @@
         "to": "",
         "reg": false,
         "x": 330,
-        "y": 1040,
+        "y": 1060,
         "wires": [
             []
         ]
@@ -1217,7 +1219,7 @@
         "id": "95e4977e14fbf4a9",
         "type": "change",
         "z": "99303979d26972e1",
-        "g": "96b236bf1accae18",
+        "g": "ac78aa98feda1acc",
         "name": "Set USB 1",
         "rules": [
             {
@@ -1234,7 +1236,7 @@
         "to": "",
         "reg": false,
         "x": 330,
-        "y": 980,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -1243,6 +1245,7 @@
         "id": "97204662a3e5a771",
         "type": "change",
         "z": "99303979d26972e1",
+        "g": "ac78aa98feda1acc",
         "name": "USB to Decoder 1",
         "rules": [
             {
@@ -1259,7 +1262,7 @@
         "to": "",
         "reg": false,
         "x": 330,
-        "y": 840,
+        "y": 860,
         "wires": [
             [
                 "a713c4846194b7e3"
@@ -1270,6 +1273,7 @@
         "id": "1e86be248effc817",
         "type": "change",
         "z": "99303979d26972e1",
+        "g": "ac78aa98feda1acc",
         "name": "USB to Decoder 2",
         "rules": [
             {
@@ -1286,7 +1290,7 @@
         "to": "",
         "reg": false,
         "x": 330,
-        "y": 880,
+        "y": 900,
         "wires": [
             [
                 "bc99e91caea7b6b1"
@@ -1327,7 +1331,7 @@
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "192.168.55.110:1234/update?Switch=image2",
+        "url": "192.168.55.110:1234/update?Switch=Playlist2",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -1377,7 +1381,7 @@
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "192.168.55.110:1234/update?Switch=image1",
+        "url": "192.168.55.110:1234/update?Switch=Playlist1",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -1427,7 +1431,7 @@
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "192.168.55.110:1234/update?Switch=image3",
+        "url": "192.168.55.110:1234/update?Switch=Playlist3",
         "tls": "",
         "persist": false,
         "proxy": "",
