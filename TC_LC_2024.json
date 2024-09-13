@@ -157,8 +157,8 @@
             "92e6284e44021742",
             "95e4977e14fbf4a9"
         ],
-        "x": 54,
-        "y": 819,
+        "x": 74,
+        "y": 1059,
         "w": 372,
         "h": 142
     },
@@ -626,7 +626,7 @@
         "z": "99303979d26972e1",
         "g": "7beef2e93fcbb54d",
         "name": "Dec 2 Debug",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -897,8 +897,8 @@
             "trigger": "PUSH",
             "state": "NONE"
         },
-        "x": 140,
-        "y": 860,
+        "x": 160,
+        "y": 1100,
         "wires": [
             [
                 "95e4977e14fbf4a9"
@@ -922,8 +922,8 @@
             "trigger": "PUSH",
             "state": "NONE"
         },
-        "x": 140,
-        "y": 920,
+        "x": 160,
+        "y": 1160,
         "wires": [
             [
                 "92e6284e44021742"
@@ -950,8 +950,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 330,
-        "y": 920,
+        "x": 350,
+        "y": 1160,
         "wires": [
             []
         ]
@@ -976,10 +976,116 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 330,
-        "y": 860,
+        "x": 350,
+        "y": 1100,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "54e543eaed3da0f2",
+        "type": "UI Control",
+        "z": "99303979d26972e1",
+        "name": "Host 1",
+        "mojo": {
+            "cp": "e92c9383ec1b9fbf",
+            "type": "BUTTON",
+            "path": "//505/19",
+            "locator": {
+                "acode": 7,
+                "aport": 3,
+                "ccode": 7,
+                "cport": 3
+            },
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 130,
+        "y": 840,
+        "wires": [
+            [
+                "d5316fd5632f31e3"
+            ]
+        ]
+    },
+    {
+        "id": "9a08edbb202961f4",
+        "type": "UI Control",
+        "z": "99303979d26972e1",
+        "name": "Host 2",
+        "mojo": {
+            "cp": "e92c9383ec1b9fbf",
+            "type": "BUTTON",
+            "path": "//505/21",
+            "locator": {
+                "acode": 8,
+                "aport": 3,
+                "ccode": 8,
+                "cport": 3
+            },
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 130,
+        "y": 900,
+        "wires": [
+            [
+                "2bdfcdf6c2130d57"
+            ]
+        ]
+    },
+    {
+        "id": "d5316fd5632f31e3",
+        "type": "change",
+        "z": "99303979d26972e1",
+        "name": "Host 1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "svsi.usb",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 290,
+        "y": 840,
+        "wires": [
+            [
+                "a713c4846194b7e3"
+            ]
+        ]
+    },
+    {
+        "id": "2bdfcdf6c2130d57",
+        "type": "change",
+        "z": "99303979d26972e1",
+        "name": "Host 2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "svsi.usb",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 290,
+        "y": 900,
+        "wires": [
+            [
+                "bc99e91caea7b6b1"
+            ]
         ]
     },
     {
