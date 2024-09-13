@@ -965,7 +965,7 @@
         "type": "change",
         "z": "99303979d26972e1",
         "g": "58fc07840685c457",
-        "name": "Set SRC 2",
+        "name": "Set USB 2",
         "rules": [
             {
                 "t": "set",
@@ -1203,8 +1203,8 @@
         "g": "a436d33e13c9e46c",
         "name": "",
         "scope": [
-            "2b44c71c19f85f9b",
-            "b9b745c1f830cabe"
+            "95e4977e14fbf4a9",
+            "92e6284e44021742"
         ],
         "uncaught": false,
         "x": 150,
