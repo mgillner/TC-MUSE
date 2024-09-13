@@ -16,6 +16,14 @@
         "env": []
     },
     {
+        "id": "2f3f3723a5c18089",
+        "type": "tab",
+        "label": "Spinetix",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "cce4d4a2f7d1010e",
         "type": "group",
         "z": "99303979d26972e1",
@@ -92,6 +100,49 @@
         "h": 322
     },
     {
+        "id": "64dfe01b0fc3a394",
+        "type": "group",
+        "z": "2f3f3723a5c18089",
+        "name": "Spinetix Control",
+        "style": {
+            "label": true,
+            "color": "#0070c0"
+        },
+        "nodes": [
+            "79e443be8ca8e2c2",
+            "36ad480a4c1ba37e",
+            "5a9916c763d2bfe8",
+            "c8a3f20956ad353c",
+            "cb1daabf12499b00",
+            "cb4e2b5685bdc72b",
+            "476f886f8780a0bf",
+            "4cf1280b50d89f4c"
+        ],
+        "x": 34,
+        "y": 99,
+        "w": 692,
+        "h": 282
+    },
+    {
+        "id": "f9838f40fb10a8c0",
+        "type": "group",
+        "z": "2f3f3723a5c18089",
+        "style": {
+            "stroke": "rgba(68, 71, 90, 0.75)",
+            "stroke-opacity": "1",
+            "fill": "#21222c",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#f8f8f2"
+        },
+        "nodes": [],
+        "x": 0,
+        "y": 0,
+        "w": 40,
+        "h": 40
+    },
+    {
         "id": "b69aeef737b799da",
         "type": "Controller",
         "z": "a3a5297f6c4eb17b",
@@ -115,7 +166,7 @@
         "name": "LC Varia SL-80",
         "mojo": {
             "device": "AMX-10001",
-            "md5": "503b448e83599a0ecb5277f030dd954d",
+            "md5": "f622ebeb058f774d4391cbfc54d1291f",
             "tp5": "TC Lets Connect 2024.TP5"
         },
         "x": 420,
@@ -808,5 +859,173 @@
                 "daea4e2d219464fa"
             ]
         ]
+    },
+    {
+        "id": "79e443be8ca8e2c2",
+        "type": "UI Control",
+        "z": "2f3f3723a5c18089",
+        "g": "64dfe01b0fc3a394",
+        "name": "Spinetix Image 2",
+        "mojo": {
+            "cp": "60c84efe28d6d2ad",
+            "type": "BUTTON",
+            "path": "//1/10",
+            "locator": {
+                "ccode": 11,
+                "cport": 1
+            },
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 140,
+        "y": 240,
+        "wires": [
+            [
+                "c8a3f20956ad353c"
+            ]
+        ]
+    },
+    {
+        "id": "36ad480a4c1ba37e",
+        "type": "debug",
+        "z": "2f3f3723a5c18089",
+        "g": "64dfe01b0fc3a394",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "5a9916c763d2bfe8",
+        "type": "tcp out",
+        "z": "2f3f3723a5c18089",
+        "g": "64dfe01b0fc3a394",
+        "name": "Spinetix API",
+        "host": "192.168.55.110",
+        "port": "1234",
+        "beserver": "client",
+        "base64": false,
+        "end": false,
+        "tls": "",
+        "x": 630,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "c8a3f20956ad353c",
+        "type": "http request",
+        "z": "2f3f3723a5c18089",
+        "g": "64dfe01b0fc3a394",
+        "name": "Image 2",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "192.168.55.110:1234/update?Switch=image2",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 320,
+        "y": 240,
+        "wires": [
+            [
+                "5a9916c763d2bfe8",
+                "36ad480a4c1ba37e"
+            ]
+        ]
+    },
+    {
+        "id": "cb1daabf12499b00",
+        "type": "UI Control",
+        "z": "2f3f3723a5c18089",
+        "g": "64dfe01b0fc3a394",
+        "name": "Spinetix Image 1",
+        "mojo": {
+            "cp": "e92c9383ec1b9fbf",
+            "type": "",
+            "path": "",
+            "locator": {
+                "ccode": 10,
+                "cport": 1
+            },
+            "trigger": "PUSH",
+            "state": "NONE"
+        },
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "476f886f8780a0bf",
+                "4cf1280b50d89f4c"
+            ]
+        ]
+    },
+    {
+        "id": "cb4e2b5685bdc72b",
+        "type": "debug",
+        "z": "2f3f3723a5c18089",
+        "g": "64dfe01b0fc3a394",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "476f886f8780a0bf",
+        "type": "http request",
+        "z": "2f3f3723a5c18089",
+        "g": "64dfe01b0fc3a394",
+        "name": "Image 1",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "192.168.55.110:1234/update?Switch=image1",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 320,
+        "y": 140,
+        "wires": [
+            [
+                "cb4e2b5685bdc72b",
+                "5a9916c763d2bfe8"
+            ]
+        ]
+    },
+    {
+        "id": "4cf1280b50d89f4c",
+        "type": "link out",
+        "z": "2f3f3723a5c18089",
+        "g": "64dfe01b0fc3a394",
+        "name": "Relay Link Out",
+        "mode": "link",
+        "links": [
+            "dcd033e255dcc032"
+        ],
+        "x": 365,
+        "y": 200,
+        "wires": []
     }
 ]
