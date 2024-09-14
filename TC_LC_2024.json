@@ -186,9 +186,9 @@
         "z": "a3a5297f6c4eb17b",
         "name": "Muse MU-1300",
         "mojo": {
-            "controller": "192.168.155.2:80",
+            "controller": "192.168.200.2:80",
             "protocol": "http",
-            "host": "192.168.155.2",
+            "host": "192.168.200.2",
             "port": 80,
             "username": "admin",
             "password": "$Mgill06071975"
