@@ -43,9 +43,7 @@
             "3368acfda836ffe5"
         ],
         "x": 54,
-        "y": 219,
-        "w": 1212,
-        "h": 242
+        "y": 219
     },
     {
         "id": "a7e847e14b808079",
@@ -63,9 +61,7 @@
             "c3ed392d15575483"
         ],
         "x": 54,
-        "y": 59,
-        "w": 372,
-        "h": 142
+        "y": 59
     },
     {
         "id": "7beef2e93fcbb54d",
@@ -95,9 +91,7 @@
             "e4d4b2c80c14e451"
         ],
         "x": 54,
-        "y": 479,
-        "w": 1392,
-        "h": 322
+        "y": 479
     },
     {
         "id": "f9838f40fb10a8c0",
@@ -162,9 +156,7 @@
             "d582dc097865d964"
         ],
         "x": 54,
-        "y": 1119,
-        "w": 1212,
-        "h": 242
+        "y": 1119
     },
     {
         "id": "ac78aa98feda1acc",
@@ -186,9 +178,7 @@
             "1e86be248effc817"
         ],
         "x": 54,
-        "y": 819,
-        "w": 392,
-        "h": 282
+        "y": 819
     },
     {
         "id": "b69aeef737b799da",
@@ -1327,11 +1317,11 @@
         "type": "http request",
         "z": "2f3f3723a5c18089",
         "g": "c99e62e743212c02",
-        "name": "Playlist 2",
+        "name": "Fire",
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "192.168.55.110:1234/update?Switch=Playlist2",
+        "url": "192.168.55.105:1234/update?Switch=Fire",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -1339,7 +1329,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 320,
+        "x": 310,
         "y": 240,
         "wires": [
             [
@@ -1377,11 +1367,11 @@
         "type": "http request",
         "z": "2f3f3723a5c18089",
         "g": "c99e62e743212c02",
-        "name": "Playlist 1",
+        "name": "Default",
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "192.168.55.110:1234/update?Switch=Playlist1",
+        "url": "192.168.55.105:1234/update?Switch=default",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -1427,11 +1417,11 @@
         "type": "http request",
         "z": "2f3f3723a5c18089",
         "g": "c99e62e743212c02",
-        "name": "Playlist 3",
+        "name": "Weather",
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "192.168.55.110:1234/update?Switch=Playlist3",
+        "url": "192.168.55.110:1234/update?Switch=Weather",
         "tls": "",
         "persist": false,
         "proxy": "",
